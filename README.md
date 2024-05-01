@@ -1,4 +1,4 @@
-# Welcome to your CDK Go project!
+# Go CDK Project with wrtten with Go
 
 This is a blank project for CDK development with Go.
 
