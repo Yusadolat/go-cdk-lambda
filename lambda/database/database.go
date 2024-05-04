@@ -6,14 +6,19 @@ import (
 )
 
 type DynamoDBClient struct {
-	databaseStore dynamodb.DynamoDB
+	databaseStore *dynamodb.DynamoDB
 
 }
 
 func newDynamoDbClient() DynamoDBClient {
 	dbSession := session.Must(session.NewSession())
 	db := dynamodb.New(dbSession)
+
 	return DynamoDBClient{
 		databaseStore: db,
 	}
+}
+
+func (u DynamoDBClient) DoesUserExist(username string) (bool, error) {
+	return true, nil
 }
